@@ -42,7 +42,7 @@ namespace Market_layihesi.Services
             throw new NotImplementedException();
         }
 
-        public Sell ReturnSell(string sellNo, SellItem sellitem)
+        public void ReturnSell(string sellNo, SellItem sellitem)
         {
             throw new ArgumentNullException();
 

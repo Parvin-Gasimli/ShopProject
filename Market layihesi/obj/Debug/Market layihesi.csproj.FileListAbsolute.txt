@@ -1,0 +1,7 @@
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\bin\Debug\Market layihesi.exe.config
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\bin\Debug\Market layihesi.exe
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\bin\Debug\Market layihesi.pdb
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\obj\Debug\Market layihesi.csproj.AssemblyReference.cache
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\obj\Debug\Market layihesi.csproj.CoreCompileInputs.cache
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\obj\Debug\Market layihesi.exe
+C:\Users\pervi\Desktop\PervinTask\ShopProject\Market layihesi\obj\Debug\Market layihesi.pdb

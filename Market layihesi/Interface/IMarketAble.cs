@@ -15,7 +15,7 @@ namespace Market_layihesi.Interface
         List<SellItem> sellItems { get; set; }
         void AddSell(int sellItemNo, int sellItemcount);
         SellItem ReturnSellitem(Sell sell);
-        Sell ReturnSell(string sellNo, SellItem sellitem);
+         void ReturnSell(string sellNo, SellItem sellitem);
         List<Sell> ReturnAllsell(string selltime, string selltime2);
         List<Sell> ReturnSell(string selltime);
         List<Sell> ReturnValueSell(double value);
