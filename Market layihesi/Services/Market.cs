@@ -71,13 +71,23 @@ namespace Market_layihesi.Services
         {
             Product product1 = new Product(name, price, catagory, code);
             Products.Add(product1);
-            
-        }
 
-        public void EditProduct(string productCode)
-        {
-            throw new NotImplementedException();
         }
+        // changes the productCodde
+        public void EditProduct(string productcode, string newproductCode)
+        {
+            var product1 = Products.Find(a => a.Code == productcode);
+            if (product1.Code == productcode)
+            {
+                productcode = newproductCode;
+
+            }
+            else
+            {
+                throw new ArgumentNullException("wrong ProductCode");
+            }
+        }   
+
 
         public List<Product> ReturnProduct(Catagory catagory)
         {

@@ -11,6 +11,7 @@ namespace Market_layihesi.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public static int Count { get; set; } = 1000;
+        public int ProductCount { get; set; }
         public string Code { get; set; }
         public Catagory Catagories { get; set; }
         public Product(string name,double price,Catagory catagory,string code)

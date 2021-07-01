@@ -11,7 +11,7 @@ namespace Market_layihesi
     {
         static void Main(string[] args)
         {
-            Market market = new Market();
+            Market shop = new Market();
             string answer;
             string answer1;
             do
@@ -43,9 +43,10 @@ namespace Market_layihesi
 
                                 switch (answer1)
                                 {
-                                    case "8":
-                                        Console.WriteLine("sistemden cixis");
+                                    case "1.1":
+                                    AddSell(shop);
                                         break;
+                                
                                     default:
                                         break;
 
@@ -59,7 +60,21 @@ namespace Market_layihesi
 
             } while (answer!="3");
         } 
+        static void AddSell(Market m2)
+        {
+            Console.WriteLine("Mehsulun nomresini daxil edin");
+            int sellitemNo = int.Parse(Console.ReadLine());
+            Console.WriteLine("mehsulun sayini daxil edin");
+
+            int sellCount = int.Parse(Console.ReadLine());
+            m2.AddSell(sellitemNo, sellCount);
+        }
+        static void EditProduct(Market m3)
+        {
+            
+        }
     } 
+   
 }
 
 

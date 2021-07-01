@@ -21,7 +21,7 @@ namespace Market_layihesi.Interface
         List<Sell> ReturnValueSell(double value);
         Sell sellReturnNo(string sellNo);
         void AddProduct(string name, double price, Catagory catagory, string code);
-        void EditProduct(string productCode);
+        void EditProduct(string productCode,string newProductCode);
         List<Product> ReturnProduct(Catagory catagory);
         List<Product> ReturnValueProducts(double value1, double value2);
         List<Product> SearchProduct(string productName);
