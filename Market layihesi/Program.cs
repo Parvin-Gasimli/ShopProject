@@ -1,4 +1,5 @@
-﻿using Market_layihesi.Services;
+﻿using Market_layihesi.Models;
+using Market_layihesi.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,12 @@ namespace Market_layihesi
                                     case "1.1":
                                     AddSell(shop);
                                         break;
+                                case "1.2":
+                                    EditProduct(shop);
+                                    break;
+                                case "1.3":
+                                    Remove(shop);
+                                    break;
                                 
                                     default:
                                         break;
@@ -71,7 +78,17 @@ namespace Market_layihesi
         }
         static void EditProduct(Market m3)
         {
-            
+            Console.WriteLine("Mehsulun kodunu daxil edin");
+            string productcount = Console.ReadLine();
+            Console.WriteLine("Mehsulun yeni kodunu daxil edin");
+            string newproductcount = Console.ReadLine();
+            m3.EditProduct(productcount, newproductcount);
+        }
+        static void Remove(Market m5)
+        {
+            Console.WriteLine("Silmek istediyiniz Mehsulun adini daxil edin");
+            string productCode = Console.ReadLine();
+            m5.Remove(productCode);
         }
     } 
    

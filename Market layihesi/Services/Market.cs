@@ -103,5 +103,17 @@ namespace Market_layihesi.Services
         {
             throw new NotImplementedException();
         }
+        //additional Method
+        public void Remove(string productCode)
+        {
+                foreach (Product item in Products)
+                {
+                if (item.Code == productCode)
+                {
+                    Products.Remove(item);
+                }
+                }
+ 
+        }
     }
 }
