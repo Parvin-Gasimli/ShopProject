@@ -13,6 +13,6 @@ namespace Market_layihesi.Models
             Et_Mehsullari,
             Sud_Mehsullari
 
-
+            
     }
 }

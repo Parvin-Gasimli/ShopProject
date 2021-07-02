@@ -14,12 +14,12 @@ namespace Market_layihesi.Interface
         List<Sell> Sells { get; set; }
         List<SellItem> sellItems { get; set; }
         void AddSell(int sellItemNo, int sellItemcount);
-        SellItem ReturnSellitem(Sell sell);
+        List<Sell> ReturnSellitem();
          void ReturnSell(string sellNo, SellItem sellitem);
         List<Sell> ReturnAllsell(string selltime, string selltime2);
         List<Sell> ReturnSell(string selltime);
         List<Sell> ReturnValueSell(double value);
-        Sell sellReturnNo(string sellNo);
+        Sell sellReturnNo(int sellNo);
         void AddProduct(string name, double price, Catagory catagory, string code);
         void EditProduct(string productCode,string newProductCode);
         List<Product> ReturnProduct(Catagory catagory);

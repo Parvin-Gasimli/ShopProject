@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Market_layihesi.Models
 {
     class Product
-    {  
-        public string Name { get; set; }
+    {
+        public string Name;
         public double Price { get; set; }
         public static int Count { get; set; } = 1000;
         public int ProductCount { get; set; }

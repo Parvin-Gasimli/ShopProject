@@ -53,6 +53,18 @@ namespace Market_layihesi
                                 case "1.3":
                                     Remove(shop);
                                     break;
+
+
+
+
+
+
+
+
+
+                                case "1.7":
+                                    Serachproduct(shop);
+                                    break;
                                 
                                     default:
                                         break;
@@ -89,6 +101,12 @@ namespace Market_layihesi
             Console.WriteLine("Silmek istediyiniz Mehsulun adini daxil edin");
             string productCode = Console.ReadLine();
             m5.Remove(productCode);
+        }
+        static  void Serachproduct(Market m6)
+        {
+            Console.WriteLine("Axtarmaq istediyiniz mehsulun adini daxil edin");
+            string productname1 = Console.ReadLine();
+            m6.SearchProduct(productname1);
         }
     } 
    

@@ -37,9 +37,9 @@ namespace Market_layihesi.Services
 
         }
 
-        public SellItem ReturnSellitem(Sell sell)
+        public List<Sell> ReturnSellitem()
         {
-            throw new NotImplementedException();
+            return Sells.ToList();
         }
 
         public void ReturnSell(string sellNo, SellItem sellitem)
@@ -62,9 +62,12 @@ namespace Market_layihesi.Services
             throw new NotImplementedException();
         }
 
-        public Sell sellReturnNo(string sellNo)
+        public Sell sellReturnNo(int sellNo)
         {
-            throw new NotImplementedException();
+            var sell1 = Sells.Find(a => a.SellNo == sellNo);
+            return sell1;
+
+                
         }
 
         public void AddProduct(string name, double price, Catagory catagory, string code)
@@ -91,7 +94,8 @@ namespace Market_layihesi.Services
 
         public List<Product> ReturnProduct(Catagory catagory)
         {
-            throw new NotImplementedException();
+            var product = Products.Find(d => d.Catagories == catagory);
+            return ReturnProduct(catagory);
         }
 
         public List<Product> ReturnValueProducts(double value1, double value2)
@@ -101,7 +105,9 @@ namespace Market_layihesi.Services
 
         public List<Product> SearchProduct(string productName)
         {
-            throw new NotImplementedException();
+            var product = Products.Find(d => d.Name == productName);
+            return SearchProduct(productName);
+            
         }
         //additional Method
         public void Remove(string productCode)
@@ -113,7 +119,7 @@ namespace Market_layihesi.Services
                     Products.Remove(item);
                 }
                 }
- 
+
         }
     }
 }
