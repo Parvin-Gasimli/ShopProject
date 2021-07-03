@@ -30,6 +30,6 @@ namespace Market_layihesi.Models
             sells = sellitem1;
         }
 
-
+       
     }
 }

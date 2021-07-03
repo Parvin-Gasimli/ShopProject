@@ -96,11 +96,32 @@ namespace Market_layihesi
             string newproductcount = Console.ReadLine();
             m3.EditProduct(productcount, newproductcount);
         }
+        //productun silinmesi
         static void Remove(Market m5)
         {
-            Console.WriteLine("Silmek istediyiniz Mehsulun adini daxil edin");
-            string productCode = Console.ReadLine();
-            m5.Remove(productCode);
+            Console.WriteLine("==============Existing product codes are shown below:==============");
+            foreach (var item in m5.Products)
+            {
+                Console.WriteLine($"code - {item.Code} ({item.Name})");
+            }
+            Console.WriteLine("Enter the code of the product, please");
+            int code;
+            string codestr = Console.ReadLine();
+            while (!int.TryParse(codestr, out code))
+            {
+                Console.WriteLine("Insert the code again");
+                codestr = Console.ReadLine();
+            }
+            try
+            {
+                m5.(code);
+                Console.WriteLine("==============Product deleted==============");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong. Try again, please");
+                Console.WriteLine(e.Message);
+            }
         }
         static  void Serachproduct(Market m6)
         {
