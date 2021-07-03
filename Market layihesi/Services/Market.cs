@@ -45,7 +45,9 @@ namespace Market_layihesi.Services
             Console.WriteLine(sell1.SellitemName,sell1.SellItemNo);
         }
         public List<Sell> ReturnAllsell(string selltime, string selltime2)
-        {
+        {if (string.IsNullOrEmpty(selltime))
+                throw new ArgumentNullException("Zaman daxil olunmayib");
+            if (string.IsNullOrEmpty(selltime2)) throw new ArgumentNullException("there is no time");
             Sell sell5 = Sells.Find(s => s.DateTime == selltime && s.DateTime == selltime2);
             return ReturnAllsell(selltime, selltime2);
         }
@@ -90,12 +92,14 @@ namespace Market_layihesi.Services
 
         }
         // changes the productCodde
-        public void EditProduct(int productcode, int newproductCode)
+        public void EditProduct(int   productcode,int newproductCode)
         {
             var product1 = Products.Find(a => a.Code == productcode);
             if (product1.Code == productcode)
             {
                 productcode = newproductCode;
+                Products.Add(product1);
+
 
             }
             else
@@ -116,10 +120,12 @@ namespace Market_layihesi.Services
            Product produc= Products.Find(s => s.Price == value1&&s.Price==value2 );
             return ReturnValueProducts(value1, value2);
         }
-
+       
         public List<Product> SearchProduct(string productName)
-        {
+        {if (string.IsNullOrEmpty(productName))
+                throw new ArgumentNullException("product name");
             var product = Products.Find(d => d.Name == productName);
+            if (product == null) throw new ArgumentNullException("there are no products with the given name");
             return SearchProduct(productName);
             
         }
@@ -140,5 +146,6 @@ namespace Market_layihesi.Services
                 throw new KeyNotFoundException("There were no inoices on this day");
            // return res.ToList();
         }
+        
     }
 }

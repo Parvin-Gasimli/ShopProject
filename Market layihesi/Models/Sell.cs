@@ -8,6 +8,7 @@ namespace Market_layihesi.Models
 {
     class Sell
     {
+
        
         public static int count;
         public   int SellNo { get; set; }

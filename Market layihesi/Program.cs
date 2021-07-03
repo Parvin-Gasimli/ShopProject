@@ -45,7 +45,8 @@ namespace Market_layihesi
                                 switch (answer1)
                                 {
                                     case "1.1":
-                                    AddSell(shop);
+                                    AddProduct(shop);
+                                    
                                         break;
                                 case "1.2":
                                     EditProduct(shop);
@@ -53,6 +54,8 @@ namespace Market_layihesi
                                 case "1.3":
                                     Remove(shop);
                                     break;
+                                case "1.4":
+                                    
 
 
 
@@ -91,10 +94,10 @@ namespace Market_layihesi
         static void EditProduct(Market m3)
         {
             Console.WriteLine("Mehsulun kodunu daxil edin");
-            string productcount = Console.ReadLine();
+            int productcount = int.Parse(Console.ReadLine());
             Console.WriteLine("Mehsulun yeni kodunu daxil edin");
-            string newproductcount = Console.ReadLine();
-            m3.EditProduct(productcount, newproductcount);
+            int newproductcount = int.Parse(Console.ReadLine());
+            m3.EditProduct(productcount,  newproductcount);
         }
         //productun silinmesi
         static void Remove(Market m5)
@@ -114,7 +117,7 @@ namespace Market_layihesi
             }
             try
             {
-                m5.(code);
+                m5.Remove(code);
                 Console.WriteLine("==============Product deleted==============");
             }
             catch (Exception e)
@@ -129,6 +132,34 @@ namespace Market_layihesi
             string productname1 = Console.ReadLine();
             m6.SearchProduct(productname1);
         }
+        static void  List<Sell> (Market m7)
+        {
+             
+        }
+        static void AddProduct(Market m8)
+        {
+            Console.WriteLine("Mehsulun Adini daxil edin");
+            string name1 = Console.ReadLine();
+            Console.WriteLine("mehsullun qiymetini daxil edin");
+            double prices = double.Parse(Console.ReadLine());
+            Console.WriteLine("Mehsulun katagoriyasini daxil edin");
+            string catagory1 = Console.ReadLine();
+            Console.WriteLine("Mehsulun kodunu daxil edin");
+            string kod = Console.ReadLine();
+            m8.AddProduct(name1, prices, catagory1, kod);
+            try
+            {
+                Console.WriteLine("mehsul ugurla elave edildi");
+                Console.WriteLine($"mehsulun adi:{name1} / Mehsulun Qiymeti:{prices} AZN/ Mehsulun novu:{catagory1} / Mehsulun kodu:{kod}");
+            }
+            catch (Exception)
+            {
+
+               //if (temp == 0)
+                    throw new KeyNotFoundException("There is no such category");
+            }
+        }
+        
     } 
    
 }
